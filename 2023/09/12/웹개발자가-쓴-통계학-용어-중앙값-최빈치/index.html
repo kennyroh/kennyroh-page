@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Statistical terms for web developers: median, mode평균이 중요하지만 전부는 아님평균의 한계평균은 모든 데이터를 균등하게 고려하기 때문에 데이터의 의미를 왜곡할수 있습니다.예를 들어, 웹사이트 방문 시간이 대부분 5-10분인데 한 명의 사용자가 60분 동안 머물렀다면, 평균은 실제 사용 패턴을 왜곡할 수 있습니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="웹개발자가 쓴 통계학 용어: 중앙값, 최빈치">
+<meta property="og:url" content="https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/index.html">
+<meta property="og:site_name" content="Kenny Roh&#39;s Blog">
+<meta property="og:description" content="Statistical terms for web developers: median, mode평균이 중요하지만 전부는 아님평균의 한계평균은 모든 데이터를 균등하게 고려하기 때문에 데이터의 의미를 왜곡할수 있습니다.예를 들어, 웹사이트 방문 시간이 대부분 5-10분인데 한 명의 사용자가 60분 동안 머물렀다면, 평균은 실제 사용 패턴을 왜곡할 수 있습니다.">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://kennyroh.github.io/images/20230912_mean-median-mode.png">
+<meta property="article:published_time" content="2023-09-12T11:17:15.000Z">
+<meta property="article:modified_time" content="2023-09-12T08:49:26.348Z">
+<meta property="article:author" content="Kenny Roh">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="통계">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kennyroh.github.io/images/20230912_mean-median-mode.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>웹개발자가 쓴 통계학 용어: 중앙값, 최빈치</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/kennyroh">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/apps/">apps</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A0%9C%EA%B3%B1%EA%B7%BC-%ED%8F%89%EA%B7%A0-%EC%A0%9C%EA%B3%B1-RMS-%EC%98%A4%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/09/11/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EB%AA%A8%EC%A7%91%EB%8B%A8-%EB%AA%A8%EC%88%98-%ED%91%9C%EB%B3%B8-%ED%86%B5%EA%B3%84%EB%9F%89/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&text=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&is_video=false&description=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치&body=Check out this article: https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&name=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&t=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Statistical-terms-for-web-developers-median-mode"><span class="toc-number">1.</span> <span class="toc-text">Statistical terms for web developers: median, mode</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%8F%89%EA%B7%A0%EC%9D%B4-%EC%A4%91%EC%9A%94%ED%95%98%EC%A7%80%EB%A7%8C-%EC%A0%84%EB%B6%80%EB%8A%94-%EC%95%84%EB%8B%98"><span class="toc-number">1.1.</span> <span class="toc-text">평균이 중요하지만 전부는 아님</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%8F%89%EA%B7%A0%EC%9D%98-%ED%95%9C%EA%B3%84"><span class="toc-number">1.1.1.</span> <span class="toc-text">평균의 한계</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A4%91%EC%95%99%EA%B0%92-Median"><span class="toc-number">1.2.</span> <span class="toc-text">중앙값 (Median)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%95%9C%EC%A4%84%EB%A1%9C-%EC%84%B8%EC%9B%A0%EC%9D%84%EB%95%8C-%EC%A4%91%EC%95%99%EC%97%90-%EC%9E%88%EB%8A%94-%EA%B0%92"><span class="toc-number">1.2.1.</span> <span class="toc-text">한줄로 세웠을때 중앙에 있는 값</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%B5%9C%EB%B9%88%EC%B9%98-Mode"><span class="toc-number">1.3.</span> <span class="toc-text">최빈치 (Mode)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B0%80%EC%9E%A5-%ED%9D%94%ED%95%9C-%EA%B0%92"><span class="toc-number">1.3.1.</span> <span class="toc-text">가장 흔한 값</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        웹개발자가 쓴 통계학 용어: 중앙값, 최빈치
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Kenny Roh</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-09-12T11:17:15.000Z" class="dt-published" itemprop="datePublished">2023-09-12</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4/">웹개발자가 쓴 통계학 용어</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/java/" rel="tag">java</a>, <a class="p-category" href="/tags/javascript/" rel="tag">javascript</a>, <a class="p-category" href="/tags/python/" rel="tag">python</a>, <a class="p-category" href="/tags/%ED%86%B5%EA%B3%84/" rel="tag">통계</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="Statistical-terms-for-web-developers-median-mode"><a href="#Statistical-terms-for-web-developers-median-mode" class="headerlink" title="Statistical terms for web developers: median, mode"></a>Statistical terms for web developers: median, mode</h1><h2 id="평균이-중요하지만-전부는-아님"><a href="#평균이-중요하지만-전부는-아님" class="headerlink" title="평균이 중요하지만 전부는 아님"></a>평균이 중요하지만 전부는 아님</h2><h3 id="평균의-한계"><a href="#평균의-한계" class="headerlink" title="평균의 한계"></a>평균의 한계</h3><p>평균은 모든 데이터를 균등하게 고려하기 때문에 데이터의 의미를 왜곡할수 있습니다.<br>예를 들어, 웹사이트 방문 시간이 대부분 5-10분인데 한 명의 사용자가 60분 동안 머물렀다면, 평균은 실제 사용 패턴을 왜곡할 수 있습니다.   </p>
+<p>그림처럼 평균이 같더라도 데이터의 퍼진 정도는 다를 수 있습니다.<br>이를 이해하지 않으면 오해를 불러일으킬 수 있습니다.<br><img src="/./images/20230912_mean-median-mode.png" alt="평균,중앙값,최빈치"></p>
+<h2 id="중앙값-Median"><a href="#중앙값-Median" class="headerlink" title="중앙값 (Median)"></a>중앙값 (Median)</h2><h3 id="한줄로-세웠을때-중앙에-있는-값"><a href="#한줄로-세웠을때-중앙에-있는-값" class="headerlink" title="한줄로 세웠을때 중앙에 있는 값"></a>한줄로 세웠을때 중앙에 있는 값</h3><p>중앙값은 데이터를 숫자 크기 순서로 정렬했을 때 중앙에 위치한 값입니다.<br>데이터의 ‘실질적인 중심’을 더 잘 나타낼 수 있습니다.</p>
+<h2 id="최빈치-Mode"><a href="#최빈치-Mode" class="headerlink" title="최빈치 (Mode)"></a>최빈치 (Mode)</h2><h3 id="가장-흔한-값"><a href="#가장-흔한-값" class="headerlink" title="가장 흔한 값"></a>가장 흔한 값</h3><p>최빈치는 데이터셋에서 가장 빈번하게 나타나는 값입니다.<br>이 지표는 특정 값이 얼마나 일반적인지를 알려주므로, 사용자의 일반적인 행동 패턴을 파악할 때 유용합니다.</p>
+<p>Python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> statistics <span class="keyword">import</span> median, mode</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"><span class="comment"># Function to calculate the median of a list of numbers</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculate_median</span>(<span class="params">numbers</span>):</span><br><span class="line">    <span class="keyword">return</span> median(numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Function to calculate the mode of a list of numbers</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculate_mode</span>(<span class="params">numbers</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> mode(numbers)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="comment"># If there are multiple modes, this part will execute</span></span><br><span class="line">        count = Counter(numbers)</span><br><span class="line">        <span class="keyword">return</span> [k <span class="keyword">for</span> k, v <span class="keyword">in</span> count.items() <span class="keyword">if</span> v == count.most_common(<span class="number">1</span>)[<span class="number">0</span>][<span class="number">1</span>]]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Sample list of numbers</span></span><br><span class="line">sample_numbers = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">20</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculate the median and mode of the sample numbers</span></span><br><span class="line">calculated_median = calculate_median(sample_numbers)</span><br><span class="line">calculated_mode = calculate_mode(sample_numbers)</span><br><span class="line"></span><br><span class="line">calculated_median, calculated_mode</span><br></pre></td></tr></table></figure>
+
+<p>Javascript</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Function to calculate the median of an array of numbers</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">calculateMedian</span>(<span class="params">numbers</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> sortedNumbers = numbers.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">    <span class="keyword">const</span> n = sortedNumbers.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">const</span> middle = <span class="title class_">Math</span>.<span class="title function_">floor</span>(n / <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (sortedNumbers[middle - <span class="number">1</span>] + sortedNumbers[middle]) / <span class="number">2</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> sortedNumbers[middle];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Function to calculate the mode of an array of numbers</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">calculateMode</span>(<span class="params">numbers</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> count = &#123;&#125;;</span><br><span class="line">    <span class="keyword">let</span> maxCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> mode = [];</span><br><span class="line"></span><br><span class="line">    numbers.<span class="title function_">forEach</span>(<span class="function">(<span class="params">number</span>) =&gt;</span> &#123;</span><br><span class="line">        count[number] = (count[number] || <span class="number">0</span>) + <span class="number">1</span>;</span><br><span class="line">        maxCount = <span class="title class_">Math</span>.<span class="title function_">max</span>(count[number], maxCount);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> [key, value] <span class="keyword">of</span> <span class="title class_">Object</span>.<span class="title function_">entries</span>(count)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (value === maxCount) &#123;</span><br><span class="line">            mode.<span class="title function_">push</span>(<span class="title class_">Number</span>(key));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> mode.<span class="property">length</span> === <span class="number">1</span> ? mode[<span class="number">0</span>] : mode;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Sample array of numbers</span></span><br><span class="line"><span class="keyword">const</span> sampleNumbers = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">20</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Calculate the median and mode of the sample numbers</span></span><br><span class="line"><span class="keyword">const</span> calculatedMedian = <span class="title function_">calculateMedian</span>(sampleNumbers);</span><br><span class="line"><span class="keyword">const</span> calculatedMode = <span class="title function_">calculateMode</span>(sampleNumbers);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;The median is:&quot;</span>, calculatedMedian);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;The mode is:&quot;</span>, calculatedMode);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StatisticsCalculator</span> &#123;</span><br><span class="line">    <span class="comment">// Function to calculate the median of an array of numbers</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">double</span> <span class="title function_">calculateMedian</span><span class="params">(<span class="type">int</span>[] numbers)</span> &#123;</span><br><span class="line">        Arrays.sort(numbers);</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> numbers.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">middle</span> <span class="operator">=</span> n / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="type">double</span>) (numbers[middle - <span class="number">1</span>] + numbers[middle]) / <span class="number">2</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> numbers[middle];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Function to calculate the mode of an array of numbers</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title function_">calculateMode</span><span class="params">(<span class="type">int</span>[] numbers)</span> &#123;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; count = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">maxCount</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">Integer</span> <span class="variable">mode</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> number : numbers) &#123;</span><br><span class="line">            count.put(number, count.getOrDefault(number, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">            maxCount = Math.max(count.get(number), maxCount);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;Integer, Integer&gt; entry : count.entrySet()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (entry.getValue() == maxCount) &#123;</span><br><span class="line">                <span class="keyword">if</span> (mode != <span class="literal">null</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="string">&quot;Multiple modes&quot;</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                mode = entry.getKey();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> mode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// Sample array of numbers</span></span><br><span class="line">        <span class="type">int</span>[] sampleNumbers = &#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">20</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Calculate the median and mode of the sample numbers</span></span><br><span class="line">        <span class="type">double</span> <span class="variable">calculatedMedian</span> <span class="operator">=</span> calculateMedian(sampleNumbers);</span><br><span class="line">        <span class="type">Object</span> <span class="variable">calculatedMode</span> <span class="operator">=</span> calculateMode(sampleNumbers);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;The median is: &quot;</span> + calculatedMedian);</span><br><span class="line">        System.out.println(<span class="string">&quot;The mode is: &quot;</span> + calculatedMode);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/kennyroh">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/apps/">apps</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Statistical-terms-for-web-developers-median-mode"><span class="toc-number">1.</span> <span class="toc-text">Statistical terms for web developers: median, mode</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%8F%89%EA%B7%A0%EC%9D%B4-%EC%A4%91%EC%9A%94%ED%95%98%EC%A7%80%EB%A7%8C-%EC%A0%84%EB%B6%80%EB%8A%94-%EC%95%84%EB%8B%98"><span class="toc-number">1.1.</span> <span class="toc-text">평균이 중요하지만 전부는 아님</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%8F%89%EA%B7%A0%EC%9D%98-%ED%95%9C%EA%B3%84"><span class="toc-number">1.1.1.</span> <span class="toc-text">평균의 한계</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A4%91%EC%95%99%EA%B0%92-Median"><span class="toc-number">1.2.</span> <span class="toc-text">중앙값 (Median)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%95%9C%EC%A4%84%EB%A1%9C-%EC%84%B8%EC%9B%A0%EC%9D%84%EB%95%8C-%EC%A4%91%EC%95%99%EC%97%90-%EC%9E%88%EB%8A%94-%EA%B0%92"><span class="toc-number">1.2.1.</span> <span class="toc-text">한줄로 세웠을때 중앙에 있는 값</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%B5%9C%EB%B9%88%EC%B9%98-Mode"><span class="toc-number">1.3.</span> <span class="toc-text">최빈치 (Mode)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B0%80%EC%9E%A5-%ED%9D%94%ED%95%9C-%EA%B0%92"><span class="toc-number">1.3.1.</span> <span class="toc-text">가장 흔한 값</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&text=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&is_video=false&description=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치&body=Check out this article: https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&title=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&name=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/&t=웹개발자가 쓴 통계학 용어: 중앙값, 최빈치"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2017-2023
+    Kenny Roh
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/kennyroh">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/apps/">apps</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

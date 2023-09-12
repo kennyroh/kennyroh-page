@@ -6,18 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="웹개발자가 쓴 통계학 용어: 모집단, 모수, 표본, 통계량모집단 (Population)전체 데이터 집합모집단은 연구 대상이 되는 전체 데이터 집합을 의미합니다.웹개발에서 모집단은 예를 들어, 웹사이트의 모든 방문자, 또는 서비스의 모든 사용자 등이 될 수 있습니다. 모수 (Parameter)모집단의 특성을 나타내는 수치모수는 모집단의 특성을 나타내는 수치입">
+    <meta name="description" content="Statistical terms for web developers: population, parameter, sample, statistics모집단 (Population)전체 데이터 집합모집단은 연구 대상이 되는 전체 데이터 집합을 의미합니다.웹개발에서 모집단은 예를 들어, 웹사이트의 모든 방문자, 또는 서비스의 모든 사용자 등이 될 수 있습니다. 모수 (">
 <meta property="og:type" content="article">
 <meta property="og:title" content="웹개발자가 쓴 통계학 용어: 모집단, 모수, 표본, 통계량">
 <meta property="og:url" content="https://kennyroh.github.io/2023/09/11/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EB%AA%A8%EC%A7%91%EB%8B%A8-%EB%AA%A8%EC%88%98-%ED%91%9C%EB%B3%B8-%ED%86%B5%EA%B3%84%EB%9F%89/index.html">
 <meta property="og:site_name" content="Kenny Roh&#39;s Blog">
-<meta property="og:description" content="웹개발자가 쓴 통계학 용어: 모집단, 모수, 표본, 통계량모집단 (Population)전체 데이터 집합모집단은 연구 대상이 되는 전체 데이터 집합을 의미합니다.웹개발에서 모집단은 예를 들어, 웹사이트의 모든 방문자, 또는 서비스의 모든 사용자 등이 될 수 있습니다. 모수 (Parameter)모집단의 특성을 나타내는 수치모수는 모집단의 특성을 나타내는 수치입">
+<meta property="og:description" content="Statistical terms for web developers: population, parameter, sample, statistics모집단 (Population)전체 데이터 집합모집단은 연구 대상이 되는 전체 데이터 집합을 의미합니다.웹개발에서 모집단은 예를 들어, 웹사이트의 모든 방문자, 또는 서비스의 모든 사용자 등이 될 수 있습니다. 모수 (">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2023-09-11T05:43:51.000Z">
-<meta property="article:modified_time" content="2023-09-11T07:40:01.940Z">
+<meta property="article:published_time" content="2023-09-11T11:43:51.000Z">
+<meta property="article:modified_time" content="2023-09-12T08:49:26.351Z">
 <meta property="article:author" content="Kenny Roh">
+<meta property="article:tag" content="java">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="통계">
+<meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
     
     
@@ -83,7 +85,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="Previous post" href="/2023/09/11/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%9D%98-%EC%A2%85%EB%A5%98/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Previous post" href="/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EC%A4%91%EC%95%99%EA%B0%92-%EC%B5%9C%EB%B9%88%EC%B9%98/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" aria-label="Next post" href="/2023/09/11/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EA%B8%B0%EC%88%A0%ED%86%B5%EA%B3%84%ED%95%99%EA%B3%BC-%EC%B6%94%EB%A1%A0%ED%86%B5%EA%B3%84%ED%95%99/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -114,7 +116,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EB%AA%A8%EC%A7%91%EB%8B%A8-%EB%AA%A8%EC%88%98-%ED%91%9C%EB%B3%B8-%ED%86%B5%EA%B3%84%EB%9F%89"><span class="toc-number">1.</span> <span class="toc-text">웹개발자가 쓴 통계학 용어: 모집단, 모수, 표본, 통계량</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8-Population"><span class="toc-number">1.1.</span> <span class="toc-text">모집단 (Population)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%A0%84%EC%B2%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A7%91%ED%95%A9"><span class="toc-number">1.1.1.</span> <span class="toc-text">전체 데이터 집합</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EC%88%98-Parameter"><span class="toc-number">1.2.</span> <span class="toc-text">모수 (Parameter)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8%EC%9D%98-%ED%8A%B9%EC%84%B1%EC%9D%84-%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94-%EC%88%98%EC%B9%98"><span class="toc-number">1.2.1.</span> <span class="toc-text">모집단의 특성을 나타내는 수치</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%91%9C%EB%B3%B8-Sample"><span class="toc-number">1.3.</span> <span class="toc-text">표본 (Sample)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8%EC%9D%98-%EC%9D%BC%EB%B6%80%EB%B6%84"><span class="toc-number">1.3.1.</span> <span class="toc-text">모집단의 일부분</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%86%B5%EA%B3%84%EB%9F%89-Statistic"><span class="toc-number">1.4.</span> <span class="toc-text">통계량 (Statistic)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%91%9C%EB%B3%B8%EC%9D%98-%ED%8A%B9%EC%84%B1%EC%9D%84-%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94-%EC%88%98%EC%B9%98"><span class="toc-number">1.4.1.</span> <span class="toc-text">표본의 특성을 나타내는 수치</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Statistical-terms-for-web-developers-population-parameter-sample-statistics"><span class="toc-number">1.</span> <span class="toc-text">Statistical terms for web developers: population, parameter, sample, statistics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8-Population"><span class="toc-number">1.1.</span> <span class="toc-text">모집단 (Population)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%A0%84%EC%B2%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A7%91%ED%95%A9"><span class="toc-number">1.1.1.</span> <span class="toc-text">전체 데이터 집합</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EC%88%98-Parameter"><span class="toc-number">1.2.</span> <span class="toc-text">모수 (Parameter)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8%EC%9D%98-%ED%8A%B9%EC%84%B1%EC%9D%84-%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94-%EC%88%98%EC%B9%98"><span class="toc-number">1.2.1.</span> <span class="toc-text">모집단의 특성을 나타내는 수치</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%91%9C%EB%B3%B8-Sample"><span class="toc-number">1.3.</span> <span class="toc-text">표본 (Sample)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8%EC%9D%98-%EC%9D%BC%EB%B6%80%EB%B6%84"><span class="toc-number">1.3.1.</span> <span class="toc-text">모집단의 일부분</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%86%B5%EA%B3%84%EB%9F%89-Statistic"><span class="toc-number">1.4.</span> <span class="toc-text">통계량 (Statistic)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%91%9C%EB%B3%B8%EC%9D%98-%ED%8A%B9%EC%84%B1%EC%9D%84-%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94-%EC%88%98%EC%B9%98"><span class="toc-number">1.4.1.</span> <span class="toc-text">표본의 특성을 나타내는 수치</span></a></li></ol></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -138,7 +140,7 @@
       
     <div class="postdate">
       
-        <time datetime="2023-09-11T05:43:51.000Z" class="dt-published" itemprop="datePublished">2023-09-11</time>
+        <time datetime="2023-09-11T11:43:51.000Z" class="dt-published" itemprop="datePublished">2023-09-11</time>
         
       
     </div>
@@ -154,7 +156,7 @@
       
     <div class="article-tag">
         <i class="fa-solid fa-tag"></i>
-        <a class="p-category" href="/tags/python/" rel="tag">python</a>, <a class="p-category" href="/tags/%ED%86%B5%EA%B3%84/" rel="tag">통계</a>
+        <a class="p-category" href="/tags/java/" rel="tag">java</a>, <a class="p-category" href="/tags/javascript/" rel="tag">javascript</a>, <a class="p-category" href="/tags/python/" rel="tag">python</a>, <a class="p-category" href="/tags/%ED%86%B5%EA%B3%84/" rel="tag">통계</a>
     </div>
 
 
@@ -163,7 +165,7 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <h1 id="웹개발자가-쓴-통계학-용어-모집단-모수-표본-통계량"><a href="#웹개발자가-쓴-통계학-용어-모집단-모수-표본-통계량" class="headerlink" title="웹개발자가 쓴 통계학 용어: 모집단, 모수, 표본, 통계량"></a>웹개발자가 쓴 통계학 용어: 모집단, 모수, 표본, 통계량</h1><h2 id="모집단-Population"><a href="#모집단-Population" class="headerlink" title="모집단 (Population)"></a>모집단 (Population)</h2><h3 id="전체-데이터-집합"><a href="#전체-데이터-집합" class="headerlink" title="전체 데이터 집합"></a>전체 데이터 집합</h3><p>모집단은 연구 대상이 되는 전체 데이터 집합을 의미합니다.<br>웹개발에서 모집단은 예를 들어, 웹사이트의 모든 방문자, 또는 서비스의 모든 사용자 등이 될 수 있습니다.</p>
+    <h1 id="Statistical-terms-for-web-developers-population-parameter-sample-statistics"><a href="#Statistical-terms-for-web-developers-population-parameter-sample-statistics" class="headerlink" title="Statistical terms for web developers: population, parameter, sample, statistics"></a>Statistical terms for web developers: population, parameter, sample, statistics</h1><h2 id="모집단-Population"><a href="#모집단-Population" class="headerlink" title="모집단 (Population)"></a>모집단 (Population)</h2><h3 id="전체-데이터-집합"><a href="#전체-데이터-집합" class="headerlink" title="전체 데이터 집합"></a>전체 데이터 집합</h3><p>모집단은 연구 대상이 되는 전체 데이터 집합을 의미합니다.<br>웹개발에서 모집단은 예를 들어, 웹사이트의 모든 방문자, 또는 서비스의 모든 사용자 등이 될 수 있습니다.</p>
 <h2 id="모수-Parameter"><a href="#모수-Parameter" class="headerlink" title="모수 (Parameter)"></a>모수 (Parameter)</h2><h3 id="모집단의-특성을-나타내는-수치"><a href="#모집단의-특성을-나타내는-수치" class="headerlink" title="모집단의 특성을 나타내는 수치"></a>모집단의 특성을 나타내는 수치</h3><p>모수는 모집단의 특성을 나타내는 수치입니다.<br>이는 평균, 분산, 표준편차 등이 될 수 있으며, 웹개발에서는 전체 사용자의 평균 세션 시간, 페이지뷰 등이 해당될 수 있습니다.</p>
 <h2 id="표본-Sample"><a href="#표본-Sample" class="headerlink" title="표본 (Sample)"></a>표본 (Sample)</h2><h3 id="모집단의-일부분"><a href="#모집단의-일부분" class="headerlink" title="모집단의 일부분"></a>모집단의 일부분</h3><p>표본은 모집단의 일부분을 의미합니다.<br>웹개발에서는 특정 기간 동안의 사용자, 또는 특정 지역의 방문자 등이 표본이 될 수 있습니다.</p>
 <h2 id="통계량-Statistic"><a href="#통계량-Statistic" class="headerlink" title="통계량 (Statistic)"></a>통계량 (Statistic)</h2><h3 id="표본의-특성을-나타내는-수치"><a href="#표본의-특성을-나타내는-수치" class="headerlink" title="표본의 특성을 나타내는 수치"></a>표본의 특성을 나타내는 수치</h3><p>통계량은 표본의 특성을 나타내는 수치입니다.<br>평균 (Mean), 중앙값 (Median), 최빈값 (Mode), 분산 (Variance)과 표준편차 (Standard Deviation), 사분위수 (Quartiles) 등이 있습니다.</p>
@@ -195,7 +197,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4-%EB%AA%A8%EC%A7%91%EB%8B%A8-%EB%AA%A8%EC%88%98-%ED%91%9C%EB%B3%B8-%ED%86%B5%EA%B3%84%EB%9F%89"><span class="toc-number">1.</span> <span class="toc-text">웹개발자가 쓴 통계학 용어: 모집단, 모수, 표본, 통계량</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8-Population"><span class="toc-number">1.1.</span> <span class="toc-text">모집단 (Population)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%A0%84%EC%B2%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A7%91%ED%95%A9"><span class="toc-number">1.1.1.</span> <span class="toc-text">전체 데이터 집합</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EC%88%98-Parameter"><span class="toc-number">1.2.</span> <span class="toc-text">모수 (Parameter)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8%EC%9D%98-%ED%8A%B9%EC%84%B1%EC%9D%84-%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94-%EC%88%98%EC%B9%98"><span class="toc-number">1.2.1.</span> <span class="toc-text">모집단의 특성을 나타내는 수치</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%91%9C%EB%B3%B8-Sample"><span class="toc-number">1.3.</span> <span class="toc-text">표본 (Sample)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8%EC%9D%98-%EC%9D%BC%EB%B6%80%EB%B6%84"><span class="toc-number">1.3.1.</span> <span class="toc-text">모집단의 일부분</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%86%B5%EA%B3%84%EB%9F%89-Statistic"><span class="toc-number">1.4.</span> <span class="toc-text">통계량 (Statistic)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%91%9C%EB%B3%B8%EC%9D%98-%ED%8A%B9%EC%84%B1%EC%9D%84-%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94-%EC%88%98%EC%B9%98"><span class="toc-number">1.4.1.</span> <span class="toc-text">표본의 특성을 나타내는 수치</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Statistical-terms-for-web-developers-population-parameter-sample-statistics"><span class="toc-number">1.</span> <span class="toc-text">Statistical terms for web developers: population, parameter, sample, statistics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8-Population"><span class="toc-number">1.1.</span> <span class="toc-text">모집단 (Population)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%A0%84%EC%B2%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A7%91%ED%95%A9"><span class="toc-number">1.1.1.</span> <span class="toc-text">전체 데이터 집합</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EC%88%98-Parameter"><span class="toc-number">1.2.</span> <span class="toc-text">모수 (Parameter)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8%EC%9D%98-%ED%8A%B9%EC%84%B1%EC%9D%84-%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94-%EC%88%98%EC%B9%98"><span class="toc-number">1.2.1.</span> <span class="toc-text">모집단의 특성을 나타내는 수치</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%91%9C%EB%B3%B8-Sample"><span class="toc-number">1.3.</span> <span class="toc-text">표본 (Sample)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%AA%A8%EC%A7%91%EB%8B%A8%EC%9D%98-%EC%9D%BC%EB%B6%80%EB%B6%84"><span class="toc-number">1.3.1.</span> <span class="toc-text">모집단의 일부분</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%86%B5%EA%B3%84%EB%9F%89-Statistic"><span class="toc-number">1.4.</span> <span class="toc-text">통계량 (Statistic)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%91%9C%EB%B3%B8%EC%9D%98-%ED%8A%B9%EC%84%B1%EC%9D%84-%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94-%EC%88%98%EC%B9%98"><span class="toc-number">1.4.1.</span> <span class="toc-text">표본의 특성을 나타내는 수치</span></a></li></ol></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
