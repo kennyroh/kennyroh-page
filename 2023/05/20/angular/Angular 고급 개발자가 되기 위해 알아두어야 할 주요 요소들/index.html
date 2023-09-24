@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들1. 정확한 타입 사용   가능한 한 ‘any’를 사용하는 것을 피하고, 타입을 사용하세요. Angular와 TypeScript를 사용하는 주요 이유 중 하나는 강력한 타입 시스템을 통한 안정성을 확보하기 위한 것입니다【11†source】. interface User &amp;#123;   id: n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들">
+<meta property="og:url" content="https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/index.html">
+<meta property="og:site_name" content="Kenny Roh&#39;s Blog">
+<meta property="og:description" content="Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들1. 정확한 타입 사용   가능한 한 ‘any’를 사용하는 것을 피하고, 타입을 사용하세요. Angular와 TypeScript를 사용하는 주요 이유 중 하나는 강력한 타입 시스템을 통한 안정성을 확보하기 위한 것입니다【11†source】. interface User &amp;#123;   id: n">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2023-05-20T08:08:25.000Z">
+<meta property="article:modified_time" content="2023-09-15T05:02:33.683Z">
+<meta property="article:author" content="Kenny Roh">
+<meta property="article:tag" content="angular">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/kennyroh">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/apps/">apps</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/05/26/angular/Angular-ElementRef-ViewRef-ComponetRef-ViewContainerRef-%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2021/12/23/%E1%84%8C%E1%85%A1%E1%84%87%E1%85%A1-%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%85%E1%85%B3%E1%86%AF-%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A1%E1%86%AB-%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3-TypeScript-for-Java-Programmers/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&text=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&is_video=false&description=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들&body=Check out this article: https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&name=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&t=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Angular-%EA%B3%A0%EA%B8%89-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EA%B8%B0-%EC%9C%84%ED%95%B4-%EC%95%8C%EC%95%84%EB%91%90%EC%96%B4%EC%95%BC-%ED%95%A0-%EC%A3%BC%EC%9A%94-%EC%9A%94%EC%86%8C%EB%93%A4"><span class="toc-number">1.</span> <span class="toc-text">Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%EC%A0%95%ED%99%95%ED%95%9C-%ED%83%80%EC%9E%85-%EC%82%AC%EC%9A%A9"><span class="toc-number">1.1.</span> <span class="toc-text">1. 정확한 타입 사용</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-package-lock-json-%EC%9D%B4%ED%95%B4"><span class="toc-number">1.2.</span> <span class="toc-text">2. package-lock.json 이해</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%ED%94%84%EB%A1%9C%EB%8D%95%EC%85%98-%EC%B0%A8%EC%9D%B4-%EC%9D%B8%EC%8B%9D"><span class="toc-number">1.3.</span> <span class="toc-text">3. 개발 및 프로덕션 차이 인식</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%EB%B9%8C%EB%93%9C-%EC%B5%9C%EC%A0%81%ED%99%94%EC%99%80-vendor-chunk-%EC%84%A4%EC%A0%95-%EC%9D%B4%ED%95%B4"><span class="toc-number">1.4.</span> <span class="toc-text">4. 빌드 최적화와 vendor-chunk 설정 이해</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5-%EB%B0%A9%EC%8B%9D-%EC%9D%B4%ED%95%B4"><span class="toc-number">1.5.</span> <span class="toc-text">5. 서비스 제공 방식 이해</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Injectable%EC%97%90%EC%84%9C-%E2%80%98providedIn%E2%80%99-%EC%82%AC%EC%9A%A9-%EA%B3%A0%EB%A0%A4"><span class="toc-number">1.6.</span> <span class="toc-text">6. Injectable에서 ‘providedIn’ 사용 고려</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Kenny Roh</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-05-20T08:08:25.000Z" class="dt-published" itemprop="datePublished">2023-05-20</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/angular/" rel="tag">angular</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="Angular-고급-개발자가-되기-위해-알아두어야-할-주요-요소들"><a href="#Angular-고급-개발자가-되기-위해-알아두어야-할-주요-요소들" class="headerlink" title="Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"></a>Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들</h2><h3 id="1-정확한-타입-사용"><a href="#1-정확한-타입-사용" class="headerlink" title="1. 정확한 타입 사용"></a>1. 정확한 타입 사용</h3><p>   가능한 한 ‘any’를 사용하는 것을 피하고, 타입을 사용하세요. Angular와 TypeScript를 사용하는 주요 이유 중 하나는 강력한 타입 시스템을 통한 안정성을 확보하기 위한 것입니다【11†source】.</p>
+<pre><code>interface User &#123;
+  id: number;
+  name: string;
+&#125;
+
+let user: User;
+user = &#123;
+  id: 1,
+  name: &quot;John Doe&quot;
+&#125;;
+</code></pre>
+<h3 id="2-package-lock-json-이해"><a href="#2-package-lock-json-이해" class="headerlink" title="2. package-lock.json 이해"></a>2. package-lock.json 이해</h3><p>   package-lock.json은 앱이 사용하는 올바른 종속성 버전을 나열합니다. 정확한 모듈 버전을 얻으려면 <code>npm ls module-name</code>을 실행하세요【11†source】.</p>
+<h3 id="3-개발-및-프로덕션-차이-인식"><a href="#3-개발-및-프로덕션-차이-인식" class="headerlink" title="3. 개발 및 프로덕션 차이 인식"></a>3. 개발 및 프로덕션 차이 인식</h3><p>   개발 모드와 프로덕션 빌드 사이에는 다른 작동 방식이 있을 수 있으므로, 개발 모드에서 모든 것이 정상적으로 작동한다고 해서 프로덕션 빌드에서도 동일하게 작동한다고 가정하지 마세요【12†source】.</p>
+<h3 id="4-빌드-최적화와-vendor-chunk-설정-이해"><a href="#4-빌드-최적화와-vendor-chunk-설정-이해" class="headerlink" title="4. 빌드 최적화와 vendor-chunk 설정 이해"></a>4. 빌드 최적화와 vendor-chunk 설정 이해</h3><p>   빌드 최적화를 사용하면 라이브러리 코드가 번들에 포함되어 크기가 작아집니다. ‘vendorChunk’을 true로 설정하면 라이브러리가 별도의 vendor chunk에 위치하게 됩니다. 이 두 가지 설정은 서로 연관되어 있으므로, 어떤 시나리오에서 어떤 설정을 사용해야 하는지 이해하는 것이 중요합니다【13†source】.</p>
+<h3 id="5-서비스-제공-방식-이해"><a href="#5-서비스-제공-방식-이해" class="headerlink" title="5. 서비스 제공 방식 이해"></a>5. 서비스 제공 방식 이해</h3><p>   서비스는 제공된 모듈에서 싱글톤입니다. 다른 모듈 제공자에게 추가하면 새 인스턴스가 생성됩니다【14†source】.</p>
+<pre><code>import &#123; Injectable &#125; from &#39;@angular/core&#39;;
+@Injectable(&#123;
+  providedIn: &#39;root&#39;,
+&#125;)
+export class UserService &#123;
+&#125;
+</code></pre>
+<h3 id="6-Injectable에서-‘providedIn’-사용-고려"><a href="#6-Injectable에서-‘providedIn’-사용-고려" class="headerlink" title="6. Injectable에서 ‘providedIn’ 사용 고려"></a>6. Injectable에서 ‘providedIn’ 사용 고려</h3><p>   Angular 6 이후에는 Injectable에 ‘providedIn:’root’’를 사용할 수 있습니다. 이렇게 하면 서비스를 모듈에 가져올 필요가 없으며, 사용하지 않는 서비스가 최종 번들에 포</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/kennyroh">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/apps/">apps</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Angular-%EA%B3%A0%EA%B8%89-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EA%B8%B0-%EC%9C%84%ED%95%B4-%EC%95%8C%EC%95%84%EB%91%90%EC%96%B4%EC%95%BC-%ED%95%A0-%EC%A3%BC%EC%9A%94-%EC%9A%94%EC%86%8C%EB%93%A4"><span class="toc-number">1.</span> <span class="toc-text">Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%EC%A0%95%ED%99%95%ED%95%9C-%ED%83%80%EC%9E%85-%EC%82%AC%EC%9A%A9"><span class="toc-number">1.1.</span> <span class="toc-text">1. 정확한 타입 사용</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-package-lock-json-%EC%9D%B4%ED%95%B4"><span class="toc-number">1.2.</span> <span class="toc-text">2. package-lock.json 이해</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%ED%94%84%EB%A1%9C%EB%8D%95%EC%85%98-%EC%B0%A8%EC%9D%B4-%EC%9D%B8%EC%8B%9D"><span class="toc-number">1.3.</span> <span class="toc-text">3. 개발 및 프로덕션 차이 인식</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%EB%B9%8C%EB%93%9C-%EC%B5%9C%EC%A0%81%ED%99%94%EC%99%80-vendor-chunk-%EC%84%A4%EC%A0%95-%EC%9D%B4%ED%95%B4"><span class="toc-number">1.4.</span> <span class="toc-text">4. 빌드 최적화와 vendor-chunk 설정 이해</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5-%EB%B0%A9%EC%8B%9D-%EC%9D%B4%ED%95%B4"><span class="toc-number">1.5.</span> <span class="toc-text">5. 서비스 제공 방식 이해</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Injectable%EC%97%90%EC%84%9C-%E2%80%98providedIn%E2%80%99-%EC%82%AC%EC%9A%A9-%EA%B3%A0%EB%A0%A4"><span class="toc-number">1.6.</span> <span class="toc-text">6. Injectable에서 ‘providedIn’ 사용 고려</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&text=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&is_video=false&description=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들&body=Check out this article: https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&title=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&name=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/&t=Angular 고급 개발자가 되기 위해 알아두어야 할 주요 요소들"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2017-2023
+    Kenny Roh
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/kennyroh">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/apps/">apps</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

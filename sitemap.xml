@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kennyroh.github.io/2017/01/01/Dependency-Injection-in-Spring-Framework/</loc>
+    
+    <lastmod>2023-09-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kennyroh.github.io/2023/05/20/angular/Angular%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%AC%E1%84%80%E1%85%B5%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%83%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8B%E1%85%A3%20%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AD%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%E1%84%83%E1%85%B3%E1%86%AF/</loc>
+    
+    <lastmod>2023-09-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kennyroh.github.io/2016/04/19/linux/connect-mysql-via-ssh-remote-host/</loc>
+    
+    <lastmod>2023-09-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kennyroh.github.io/2016/04/18/linux/linux%20ip%20redirect%20to%20localhost/</loc>
+    
+    <lastmod>2023-09-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kennyroh.github.io/2023/09/12/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4/%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1-%E1%84%8A%E1%85%B3%E1%86%AB-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8%E1%84%92%E1%85%A1%E1%86%A8-%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8B%E1%85%A5-%E1%84%8C%E1%85%A6%E1%84%80%E1%85%A9%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB-%E1%84%91%E1%85%A7%E1%86%BC%E1%84%80%E1%85%B2%E1%86%AB-%E1%84%8C%E1%85%A6%E1%84%80%E1%85%A9%E1%86%B8-RMS-%E1%84%8B%E1%85%A9%E1%84%91%E1%85%A5%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB/</loc>
     
     <lastmod>2023-09-13</lastmod>
@@ -29,7 +65,16 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2023/07/11/langchain-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-980%EB%85%84%EB%8C%80-%EC%84%B8%EC%83%81%EC%9D%84-%EB%B0%94%EA%BF%A8%EB%8D%98-5%EA%B0%80%EC%A7%80-%EC%82%AC%EA%B1%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EB%A6%AC%EC%8A%A4%ED%8A%B8%EB%A1%9C-%EB%B3%B4%EC%97%AC%EC%A3%BC%EC%84%B8%EC%9A%94/</loc>
+    <loc>https://kennyroh.github.io/2023/06/16/UML-%E1%84%83%E1%85%A9%E1%84%80%E1%85%AE-mermaid%E1%84%85%E1%85%A9-flowchart%E1%84%85%E1%85%B3%E1%86%AF-%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%84%8C%E1%85%A1/</loc>
+    
+    <lastmod>2023-09-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kennyroh.github.io/2023/07/11/langchain-%E1%84%8B%E1%85%B3%E1%86%AF-%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A2%E1%84%89%E1%85%A5-980%E1%84%82%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A2-%E1%84%89%E1%85%A6%E1%84%89%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF-%E1%84%87%E1%85%A1%E1%84%81%E1%85%AF%E1%86%BB%E1%84%83%E1%85%A5%E1%86%AB-5%E1%84%80%E1%85%A1%E1%84%8C%E1%85%B5-%E1%84%89%E1%85%A1%E1%84%80%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A6-%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2-%E1%84%85%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%B3%E1%84%85%E1%85%A9-%E1%84%87%E1%85%A9%E1%84%8B%E1%85%A7%E1%84%8C%E1%85%AE%E1%84%89%E1%85%A6%E1%84%8B%E1%85%AD/</loc>
     
     <lastmod>2023-09-12</lastmod>
     
@@ -74,16 +119,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2023/09/06/cx-Oracle-DatabaseError-DPI-1047/</loc>
-    
-    <lastmod>2023-09-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kennyroh.github.io/2023/06/05/Node-js%EC%97%90%EC%84%9C-C-C-%EB%A1%9C-%EC%95%A0%EB%93%9C%EC%98%A8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
+    <loc>https://kennyroh.github.io/2023/06/05/Node-js%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5-C-C-%E1%84%85%E1%85%A9-%E1%84%8B%E1%85%A2%E1%84%83%E1%85%B3%E1%84%8B%E1%85%A9%E1%86%AB-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5/</loc>
     
     <lastmod>2023-07-11</lastmod>
     
@@ -92,25 +128,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2023/06/16/UML-%EB%8F%84%EA%B5%AC-mermaid%EB%A1%9C-flowchart%EB%A5%BC-%EA%B7%B8%EB%A6%AC%EC%9E%90/</loc>
-    
-    <lastmod>2023-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kennyroh.github.io/2023/05/23/%EC%9B%B9%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC-%EC%9D%B8-%EC%95%A1%EC%85%98-emscripten-Uncaught-TypeError-Module-malloc-is-not-a-function-%ED%95%B4%EA%B2%B0/</loc>
-    
-    <lastmod>2023-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kennyroh.github.io/2023/05/31/%EC%9B%B9%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC-wasm-%EA%B3%BC-WAT/</loc>
+    <loc>https://kennyroh.github.io/2023/05/31/%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%8B%E1%85%A5%E1%84%89%E1%85%A6%E1%86%B7%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5-wasm-%E1%84%80%E1%85%AA-WAT/</loc>
     
     <lastmod>2023-06-17</lastmod>
     
@@ -146,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2021/06/03/GraphQL-Rest-api%EC%9D%98-%EC%98%A4%EB%B2%84%ED%8C%A8%EC%B9%AD-%EC%96%B8%EB%8D%94%ED%8C%A8%EC%B9%AD-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EA%B4%80%EB%A6%AC%EC%97%90-%EB%8C%80%ED%95%9C-%ED%95%B4%EB%B2%95/</loc>
+    <loc>https://kennyroh.github.io/2021/06/03/GraphQL-Rest-api%E1%84%8B%E1%85%B4-%E1%84%8B%E1%85%A9%E1%84%87%E1%85%A5%E1%84%91%E1%85%A2%E1%84%8E%E1%85%B5%E1%86%BC-%E1%84%8B%E1%85%A5%E1%86%AB%E1%84%83%E1%85%A5%E1%84%91%E1%85%A2%E1%84%8E%E1%85%B5%E1%86%BC-%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%83%E1%85%B3%E1%84%91%E1%85%A9%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%B3-%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A6-%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AB-%E1%84%92%E1%85%A2%E1%84%87%E1%85%A5%E1%86%B8/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -155,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2021/12/23/%EC%9E%90%EB%B0%94-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-TypeScript-for-Java-Programmers/</loc>
+    <loc>https://kennyroh.github.io/2021/12/23/%E1%84%8C%E1%85%A1%E1%84%87%E1%85%A1-%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%E1%84%85%E1%85%B3%E1%86%AF-%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A1%E1%86%AB-%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3-TypeScript-for-Java-Programmers/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -164,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2017/02/14/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%9C%EC%96%B4-%EC%97%AD%EC%A0%84-Inversion-of-Control/</loc>
+    <loc>https://kennyroh.github.io/2017/02/14/%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%E1%85%B4-%E1%84%8C%E1%85%A6%E1%84%8B%E1%85%A5-%E1%84%8B%E1%85%A7%E1%86%A8%E1%84%8C%E1%85%A5%E1%86%AB-Inversion-of-Control/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -173,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2017/02/28/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%8A%A4%ED%94%84%EB%A7%81%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%98-%ED%95%B5%EC%8B%AC/</loc>
+    <loc>https://kennyroh.github.io/2017/02/28/%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC-%E1%84%8F%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5-%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%E1%84%8B%E1%85%A2%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB%E1%84%8B%E1%85%B4-%E1%84%92%E1%85%A2%E1%86%A8%E1%84%89%E1%85%B5%E1%86%B7/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -182,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2017/04/22/%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%99%80-jUnit4/</loc>
+    <loc>https://kennyroh.github.io/2017/04/22/%E1%84%83%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B1-%E1%84%90%E1%85%A6%E1%84%89%E1%85%B3%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AA-jUnit4/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -191,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2017/12/24/Spring-Boot-Actuator%EB%A5%BC-%ED%99%9C%EC%9A%A9/</loc>
+    <loc>https://kennyroh.github.io/2017/12/24/Spring-Boot-Actuator%E1%84%85%E1%85%B3%E1%86%AF-%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -200,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/21/Effective-java-Concurrency-thread-scheduler%EC%97%90-%EC%9D%98%EC%A1%B4%ED%95%98%EC%A7%80-%EB%A7%90%EB%9D%BC/</loc>
+    <loc>https://kennyroh.github.io/2020/08/21/Effective-java/Effective-java-Concurrency-thread-scheduler%E1%84%8B%E1%85%A6-%E1%84%8B%E1%85%B4%E1%84%8C%E1%85%A9%E1%86%AB%E1%84%92%E1%85%A1%E1%84%8C%E1%85%B5-%E1%84%86%E1%85%A1%E1%86%AF%E1%84%85%E1%85%A1/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -209,7 +227,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/20/Effective-java-Concurrency-Prefer-concurrency-use-lazy-initialization-judiciously/</loc>
+    <loc>https://kennyroh.github.io/2020/08/20/Effective-java/Effective-java-Concurrency-Prefer-concurrency-use-lazy-initialization-judiciously/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -218,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/18/Effective-java-Concurrency-Prefer-concurrency-utilities-to-wait-and-notify/</loc>
+    <loc>https://kennyroh.github.io/2020/08/18/Effective-java/Effective-java-Concurrency-Prefer-concurrency-utilities-to-wait-and-notify/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -227,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/17/Effective-java-Concurrency-Prefer-executors-tasks-and-streams-to-threads/</loc>
+    <loc>https://kennyroh.github.io/2020/08/17/Effective-java/Effective-java-Concurrency-Prefer-executors-tasks-and-streams-to-threads/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -245,7 +263,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2017/01/01/Dependency-Injection-in-Spring-Framework/</loc>
+    <loc>https://kennyroh.github.io/2023/05/27/angular/Angular-Path-%E1%84%91%E1%85%A1%E1%84%85%E1%85%A1%E1%84%86%E1%85%B5%E1%84%90%E1%85%A5-Matrix-URI-%E1%84%91%E1%85%A1%E1%84%85%E1%85%A1%E1%84%86%E1%85%B5%E1%84%90%E1%85%A5-Query-%E1%84%91%E1%85%A1%E1%84%85%E1%85%A1%E1%84%86%E1%85%B5%E1%84%90%E1%85%A5-Fragment/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -254,7 +272,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2023/05/27/Angular-Path-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-Matrix-URI-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-Query-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-Fragment/</loc>
+    <loc>https://kennyroh.github.io/2023/05/27/angular/Angular-ngFor-ng-template-let/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -263,7 +281,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2023/05/27/Angular-ngFor-ng-template-let/</loc>
+    <loc>https://kennyroh.github.io/2023/05/28/angular/Angular-ChangeDetectionStrategy-OnPush-%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%82%E1%85%A5%E1%86%AB%E1%84%90%E1%85%B3-%E1%84%87%E1%85%A7%E1%86%AB%E1%84%80%E1%85%A7%E1%86%BC%E1%84%80%E1%85%A1%E1%86%B7%E1%84%8C%E1%85%B5-%E1%84%8C%E1%85%A6%E1%84%8B%E1%85%AC/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -272,16 +290,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2023/05/26/Angular-ElementRef-ViewRef-ComponetRef-ViewContainerRef-%EC%A0%95%EB%A6%AC/</loc>
-    
-    <lastmod>2023-06-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kennyroh.github.io/2023/05/28/Angular-ChangeDetectionStrategy-OnPush-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EB%B3%80%EA%B2%BD%EA%B0%90%EC%A7%80-%EC%A0%9C%EC%99%B8/</loc>
+    <loc>https://kennyroh.github.io/2023/05/26/angular/Angular-ElementRef-ViewRef-ComponetRef-ViewContainerRef-%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5/</loc>
     
     <lastmod>2023-06-03</lastmod>
     
@@ -308,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2019/06/20/Effective-java-%EC%83%9D%EC%84%B1%EC%9E%90-%EB%8C%80%EC%8B%A0-%EC%A0%95%EC%A0%81-%ED%8C%A9%ED%86%A0%EB%A6%AC-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%82%AC%EC%9A%A9/</loc>
+    <loc>https://kennyroh.github.io/2019/06/20/Effective-java/Effective-java-%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A1-%E1%84%83%E1%85%A2%E1%84%89%E1%85%B5%E1%86%AB-%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%A8-%E1%84%91%E1%85%A2%E1%86%A8%E1%84%90%E1%85%A9%E1%84%85%E1%85%B5-%E1%84%86%E1%85%A6%E1%84%89%E1%85%A5%E1%84%83%E1%85%B3-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -317,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2019/06/20/Effective-java-%EB%B6%88%EB%B3%80-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%84%A4%EA%B3%84/</loc>
+    <loc>https://kennyroh.github.io/2019/06/20/Effective-java/Effective-java-%E1%84%87%E1%85%AE%E1%86%AF%E1%84%87%E1%85%A7%E1%86%AB-%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A2%E1%84%89%E1%85%B3-%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -326,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/07/29/Effective-java-Utilize-wildcard-for-unknown-types/</loc>
+    <loc>https://kennyroh.github.io/2020/07/29/Effective-java/Effective-java-Utilize-wildcard-for-unknown-types/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -335,7 +344,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/01/Effective-java-Utilize-generic-methods/</loc>
+    <loc>https://kennyroh.github.io/2020/08/01/Effective-java/Effective-java-Utilize-generic-methods/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -344,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2019/11/05/Effective-java-try-with-resources/</loc>
+    <loc>https://kennyroh.github.io/2019/11/05/Effective-java/Effective-java-try-with-resources/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -353,7 +362,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/07/21/Effective-java-Simultaneously-override-equals-and-hashCode/</loc>
+    <loc>https://kennyroh.github.io/2020/07/21/Effective-java/Effective-java-Simultaneously-override-equals-and-hashCode/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -362,7 +371,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/07/21/Effective-java-Prefer-interfaces-over-implementation-types/</loc>
+    <loc>https://kennyroh.github.io/2020/07/21/Effective-java/Effective-java-Prefer-interfaces-over-implementation-types/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -371,7 +380,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/04/03/Effective-java-Maintain-consistency-in-hashCode/</loc>
+    <loc>https://kennyroh.github.io/2020/04/03/Effective-java/Effective-java-Maintain-consistency-in-hashCode/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -380,7 +389,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/11/Effective-java-Lambda-Expressions-and-Streams-Utilize-the-Stream-API/</loc>
+    <loc>https://kennyroh.github.io/2020/08/11/Effective-java/Effective-java-Lambda-Expressions-and-Streams-Utilize-the-Stream-API/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -389,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/09/Effective-java-Lambda-Expressions-and-Streams-Utilize-lambda-expressions/</loc>
+    <loc>https://kennyroh.github.io/2020/08/09/Effective-java/Effective-java-Lambda-Expressions-and-Streams-Utilize-lambda-expressions/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -398,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/09/Effective-java-Lambda-Expressions-and-Streams-Utilize-functional-interfaces/</loc>
+    <loc>https://kennyroh.github.io/2020/08/09/Effective-java/Effective-java-Lambda-Expressions-and-Streams-Utilize-functional-interfaces/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -407,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/01/15/Effective-java-Guidelines-for-overriding-equals/</loc>
+    <loc>https://kennyroh.github.io/2020/01/15/Effective-java/Effective-java-Guidelines-for-overriding-equals/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -416,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/07/22/Effective-java-Favor-composition-over-inheritance/</loc>
+    <loc>https://kennyroh.github.io/2020/07/22/Effective-java/Effective-java-Favor-composition-over-inheritance/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -425,7 +434,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/15/Effective-java-Exception-Handling-%ED%91%9C%EC%A4%80-%EC%98%88%EC%99%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/</loc>
+    <loc>https://kennyroh.github.io/2020/08/15/Effective-java/Effective-java-Exception-Handling-%E1%84%91%E1%85%AD%E1%84%8C%E1%85%AE%E1%86%AB-%E1%84%8B%E1%85%A8%E1%84%8B%E1%85%AC%E1%84%85%E1%85%B3%E1%86%AF-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%85%E1%85%A1/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -434,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/12/Effective-java-Exception-Handling-Utilize-Optional/</loc>
+    <loc>https://kennyroh.github.io/2020/08/12/Effective-java/Effective-java-Exception-Handling-Utilize-Optional/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -443,7 +452,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/12/Effective-java-Exception-Handling-Utilize-checked-and-unchecked-exceptions-appropriately/</loc>
+    <loc>https://kennyroh.github.io/2020/08/12/Effective-java/Effective-java-Exception-Handling-Utilize-checked-and-unchecked-exceptions-appropriately/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -452,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/05/Effective-java-Enum-Types-and-Annotations-Utilize-enum-types/</loc>
+    <loc>https://kennyroh.github.io/2020/08/05/Effective-java/Effective-java-Enum-Types-and-Annotations-Utilize-enum-types/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -461,7 +470,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/09/Effective-java-Enum-Types-and-Annotations-Utilize-annotation-processors/</loc>
+    <loc>https://kennyroh.github.io/2020/08/09/Effective-java/Effective-java-Enum-Types-and-Annotations-Utilize-annotation-processors/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -470,7 +479,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/07/Effective-java-Enum-Types-and-Annotations-Utilize-and-define-annotations/</loc>
+    <loc>https://kennyroh.github.io/2020/08/07/Effective-java/Effective-java-Enum-Types-and-Annotations-Utilize-and-define-annotations/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -479,7 +488,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/07/25/Effective-java-Ensure-type-safety/</loc>
+    <loc>https://kennyroh.github.io/2020/07/25/Effective-java/Effective-java-Ensure-type-safety/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -488,7 +497,7 @@
   </url>
   
   <url>
-    <loc>https://kennyroh.github.io/2020/08/16/Effective-java-Concurrency/</loc>
+    <loc>https://kennyroh.github.io/2020/08/16/Effective-java/Effective-java-Concurrency/</loc>
     
     <lastmod>2023-05-31</lastmod>
     
@@ -499,7 +508,7 @@
 
   <url>
     <loc>https://kennyroh.github.io/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -507,112 +516,119 @@
   
   <url>
     <loc>https://kennyroh.github.io/tags/java/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/typescript/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/angular/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/c-c/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/html/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/nextjs/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/spring/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/emscripten/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/data/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/node-js/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/c/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/AI/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/python/</loc>
-    <lastmod>2023-09-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kennyroh.github.io/tags/oracle/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/%ED%86%B5%EA%B3%84/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kennyroh.github.io/tags/javascript/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kennyroh.github.io/tags/%EB%8F%84%EA%B5%AC/</loc>
+    <lastmod>2023-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kennyroh.github.io/tags/linux/</loc>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -621,7 +637,7 @@
   
   <url>
     <loc>https://kennyroh.github.io/categories/%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%93%B4-%ED%86%B5%EA%B3%84%ED%95%99-%EC%9A%A9%EC%96%B4/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
