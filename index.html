@@ -1,10 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  <meta charset="UTF-8" />
+  <title>홈페이지 (macOS 터미널 스타일)</title>
+  <style>
+    /* 전체 화면 배경 색상 */
+    body {
+      margin: 0;
+      background-color: #2b2b2b;
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+      background: #f5f5f7;
+    }
+
+    /* 맥OS 스타일 CSS */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .button {
+      border-radius: 20px;
+      background: #0071e3;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+    }
+
+    /* 반투명 효과 */
+    .glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-radius: 12px;
+    }
+
+    /* 부드러운 그림자 */
+    .card {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 터미널 창 컨테이너 */
+    .terminal-window {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: #1e1e1e;
+      border-radius: 6px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      padding: 1rem;
+    }
+
+    /* 상단 바 (macOS 버튼 영역) */
+    .window-header {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      background-color: #2b2b2b;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    /* macOS 창의 세 개 버튼(빨강/노랑/초록) */
+    .traffic-lights {
+      display: flex;
+      gap: 8px;
+    }
+
+    .traffic-light {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #ff5f57; /* 빨강 */
+    }
+    .traffic-light:nth-child(2) {
+      background-color: #ffbd2e; /* 노랑 */
+    }
+    .traffic-light:nth-child(3) {
+      background-color: #28c840; /* 초록 */
+    }
+
+    /* 내용 영역 */
+    .terminal-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-self: flex-start;
+      color: #e0e0e0;
+      margin-top: 1rem;
+      white-space: pre-wrap;
+      line-height: 1.5;
+    }
+
+    /* 링크 스타일 (필요하다면 조정) */
+    .terminal-content a {
+      color: #8ec07c;
+      text-decoration: none;
+    /* 추가된 스타일: ul 요소의 여백과 패딩 제거 */
+    .terminal-content ul {
+      margin: 0;
+      padding: 0;
+    }
+    .terminal-content a:hover {
+      text-decoration: underline;
+
+    /* 링크 스타일 (필요하다면 조정) */
+    .terminal-content a {
+      color: #8ec07c;
+      text-decoration: none;
+    }
+    .terminal-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
+<div class="terminal-window">
+  <div class="window-header">
+    <div class="traffic-lights">
+      <div class="traffic-light"></div>
+      <div class="traffic-light"></div>
+      <div class="traffic-light"></div>
+    </div>
+  </div>
+  <div class="terminal-content">
+    <ul>
+      <li><a href="#">블로그 1</a></li>
+      <li><a href="#">블로그 2</a></li>
+      <li><a href="#">뽀모도로 타이머</a></li>
+    </ul>
+  </div>
+</div>
 </body>
 </html>
